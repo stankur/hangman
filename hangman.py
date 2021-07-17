@@ -146,30 +146,30 @@ def hangman(word, hint, playerseq, nonletters, guessed, chances, letters, player
 			dialog('-- YOU WIN (PRO ENDING) --')
 			complete()
 			
-			#handles a valid guess (a letter), whether correct or wrong
-			if len(guess) == 1 and guess in letters:
-				if guess in playerguess:
-					dialog('Ha.. Ha.. Ha.. You have guessed that before, do you have dementia or alzheimer or something?', p)
+		#handles a valid guess (a letter), whether correct or wrong
+		if len(guess) == 1 and guess in letters:
+			if guess in playerguess:
+				dialog('Ha.. Ha.. Ha.. You have guessed that before, do you have dementia or alzheimer or something?', p)
 
-					chances -= 1
+				chances -= 1
 
 
-				elif guess not in word:
-					dialog('Dumb powerless weakling, you are wrong, just like your mom when she decided to give birth to you lol.', p)
+			elif guess not in word:
+				dialog('Dumb powerless weakling, you are wrong, just like your mom when she decided to give birth to you lol.', p)
 
-					chances -= 1
+				chances -= 1
 
-				else:
-					dialog('You are correct, well at least for now.', p)
-
-					guessed.append(guess)
-
-			#handles invalid guess (not a letter)
 			else:
-				dialog('Pressing random keys, eh? I won\'t do that if I were you, weakling.', p)
-				dialog('Take this as a warning.', p)
+				dialog('You are correct, well at least for now.', p)
 
-				nonletters.append(guess)
+				guessed.append(guess)
+
+		#handles invalid guess (not a letter)
+		else:
+			dialog('Pressing random keys, eh? I won\'t do that if I were you, weakling.', p)
+			dialog('Take this as a warning.', p)
+
+			nonletters.append(guess)
 
 	#this runs when the fail to guess correctly and the chances are no more
 	else:
