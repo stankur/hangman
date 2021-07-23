@@ -1,6 +1,6 @@
 from HangmanShared import *
 
-
+#This file containes the initial data that a hangman game needs. These data will be updated throughout the game
 def make_initial_formation(word):
 	return '_ ' * len(word)
 

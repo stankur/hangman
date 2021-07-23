@@ -1,5 +1,6 @@
 from HangmanShared import *
 
+#this file contains all the possible states in the hangman game
 class State:
 	def __init__(self, name, data):
 		self.name = name

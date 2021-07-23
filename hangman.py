@@ -22,6 +22,7 @@ print_dialog('Cuz I will kill you and that lil Pascal bastard!', speaker)
 print_dialog('Pick and type a category from the following: BC People Name, Body Part, Fruit.', speaker)
 print_dialog('-- PLEASE TYPE YOUR CHOICE AND PRESS ENTER TO PROCEED --')
 
+#this is trying to receive a valid input of the player's category of choice
 player_input = input().lower()
 
 request_times = 0
@@ -62,8 +63,12 @@ initial_chances = 5
 
 Gameplay_Data = HangmanInitialData.GameplayData((word, hint), initial_chances)
 
+#This leads to the initial state of the game. The states will then transition automatically to other stages of the game depending on the player's  inputs
+#All the states available in the game are in HangmanStates.py
 HangmanStates.ChancesCheckState(Gameplay_Data).procedures()
 
+#The code escapes the state machine only when the player has correctly guessed the eword without running out of chances
+#This is the normal winning ending
 print_dialog('Nice... You turn out to be not that dumb, eh...', speaker)
 print_dialog('But too bad you\'re not intelligent enough to understand that I don\'t care about this little game lol.', speaker)
 print_dialog('I\'ll still kill you, a random useless dude, and that stupid little Pascal.', speaker)

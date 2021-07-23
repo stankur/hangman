@@ -1,3 +1,6 @@
+#This file contains all the functions and data that will be used in all the other files
+
+#This are the possible word-hint pair in the hangman game
 hangman_words = {
 	'bc people name' : [('samuel', 'sensei'), ('andreas', 'mini version'), ('dewi', 'overlord'), ('otto', 'silver'), ('Indri', 'sensei\'s sensei')],
 	'body part' : [('eye', '2c'), ('foot', 'journey'), ('belly', 'fat'), ('finger', 'touch'), ('heart', 'DEG DEG DEG')],
